@@ -2,14 +2,13 @@ package model;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.MappedSuperclass;
 import javax.persistence.Table;
 import javax.validation.constraints.NotNull;
 
 
 @Entity(name = "users")
 @Table(name = "users")
-public class Users extends BaseEntity {
+public class User extends BaseEntity {
     @NotNull
     @Column(name = "ID")
     private Integer ID;
@@ -29,7 +28,7 @@ public class Users extends BaseEntity {
     @Column(name = "password")
     private String password;
 
-    public Users() {
+    public User() {
     }
 
     public Integer getID() {
@@ -63,6 +62,7 @@ public class Users extends BaseEntity {
     public void setUsername(String username) {
         this.username = username;
     }
+
     public String getPassword() {
         return password;
     }
@@ -70,4 +70,5 @@ public class Users extends BaseEntity {
     public void setPassword(String password) {
         this.password = password;
     }
+
 }
